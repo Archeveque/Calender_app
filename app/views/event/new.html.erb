@@ -1,0 +1,23 @@
+<form action="/event/create" method="POST">
+<div class="mb-3 d-flex justify-content-center">
+<p>Titre
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+  <input type="text" name="title" required="required"></p>
+  </div>
+  <div class="mb-3 d-flex justify-content-center">
+  <p>date:
+ <input type="text" name="date" required="required">
+  durée (en minutes)
+  <input type="text" name="duration" required="required"></p>
+  </div>
+  <p class="d-flex justify-content-center" >Prix
+  <input type="text" name="price" required="required">€  lieu :
+  <input type="text" name="location" required="required"></p>
+  <p class="d-flex justify-content-center" >Description</p>
+  <p class="d-flex justify-content-center">
+  <textarea id="content" name="content" rows="10" cols="70"></textarea>
+  </p>
+  <p class="d-flex justify-content-center">
+  <input type="submit" value="Valider">
+  </p>
+</form>
