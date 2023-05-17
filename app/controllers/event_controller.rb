@@ -10,6 +10,11 @@ class EventController < ApplicationController
     author = current_user
     @event= Event.create(user: author,title:params["title"],content:params["content"],location:params["location"],price:params["price"] )
     puts @event
+    puts author 
+    puts params["title"]
+    puts params["content"]
+    puts params["location"]
+    puts params["price"]
     if @event.save
        puts "saved"
        redirect_to"/event/view"
